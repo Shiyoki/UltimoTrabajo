@@ -1,0 +1,47 @@
+{% extends "home.html" %}
+
+{% block content %}
+<section class="row mt-2">
+    <div class="col-lg-6 offset-3">
+        
+        <form class="card bg-dark border-dark mt-5" action="{{ url_for('index.insert') }}" method="POST">
+          <div class="row">
+            <div class="text-center h1 text-white p-2 col-lg-12">Registrar producto</div>
+              
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.codigo.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.codigo(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.descripcion.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.descripcion(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.categoria.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.categoria(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.stock.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.stock(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.bodega.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.bodega(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.precio.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.precio(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.iva.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.iva(class="form-control mt-2") }}
+              </div>    
+          </div>
+          <div class="text-center">
+            {{ form.submit(class="btn btn-danger mt-4")}}
+          </div>
+        </form>
+        </div>
+</section>
+
+{% endblock content %}

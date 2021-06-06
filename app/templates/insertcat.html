@@ -1,0 +1,30 @@
+{% extends "home.html" %}
+
+{% block content %}
+<section class="row mt-2">
+    <div class="col-lg-6 offset-3">
+        
+        <form class="card bg-dark border-dark mt-5" action="{{ url_for('index.insertcat') }}" method="POST">
+          <div class="row">
+            <div class="text-center h1 text-white p-2 col-lg-12">Registrar categoria</div>
+              
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.cod_cate.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.cod_cate(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.nom_cate.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.nom_cate(class="form-control mt-2") }}
+              </div>
+              <div class="text-center form-group col-lg-10 offset-1">
+                {{ form.tipo_cate.label(class="form-control-label fst-italic text-light pt-3") }}
+                {{ form.tipo_cate(class="form-control mt-2") }}
+              </div>
+          </div>
+          <div class="text-center">
+            {{ form.submit(class="btn btn-danger mt-4")}}
+          </div>
+        </form>
+        </div>
+
+{% endblock content %}

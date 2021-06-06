@@ -1,0 +1,5 @@
+.idea/
+venv/
+app/__pycache__/
+app/Config.py
+app/index/__pycache__/

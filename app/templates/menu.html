@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+
+{% block content %}
+<section class="row mt-5">
+    <div class="col-lg-6 offset-3">
+        <div class="card bg-dark border-danger mt-5">
+            <h3 class="card-title fw-bold text-light text-center my-2">Elegir una Opcion</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark text-light border-danger">
+                    <span class="fst-italic fs-5">Agregar producto</span>
+                    <a href="{{ url_for('index.insert') }}" class="btn btn-danger float-end">Registrar</a>
+                </li>
+                <li class="list-group-item bg-dark text-light border-danger">
+                    <span class="fst-italic fs-5">Agregar categoria</span>
+                    <a href="{{ url_for('index.insertcat') }}" class="btn btn-danger float-end">Registrar</a>
+                </li>
+                <li class="list-group-item bg-dark text-light border-danger">
+                    <span class="fst-italic fs-5">Mostrar producto</span>
+                    <a href="{{ url_for('index.tablaprod') }}" class="btn btn-danger float-end">Mostrar</a>
+                </li>
+                <li class="list-group-item bg-dark text-light border-danger">
+                    <span class="fst-italic fs-5">Mostar categoria</span>
+                    <a href="{{ url_for('index.tablacat') }}" class="btn btn-danger float-end">Mostrar</a>
+                </li>
+                </ul>
+        </div>
+    </div>
+</section>
+{% endblock content %}
